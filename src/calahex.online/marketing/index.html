@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Theme Made By www.w3schools.com -->
+    <title>Calahex</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* body {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+            padding-left: 300px;
+            padding-right: 300px;
+        } */
+        .row{
+            display: flex;
+            align-items: center;
+        }
+        .footer_row{
+            display: block;
+        }
+        .btn-group-lg>.btn, .btn-lg {
+            padding: 10px 50px;
+            font-size: 20px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+            font-weight: 700;
+            border: 2px solid transparent;
+        }
+        .bod {
+            font: 400 15px Lato, sans-serif;
+            line-height: 1.8;
+            color: #818181;
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .landing_img {
+           /* width: 600px;*/
+            border-radius: 15px;
+               max-width: 100%;
+            height: auto;
+            width: auto\9; /* ie8 */
+        }
+        
+        .text-white {
+            color: white!important;
+        }
+        
+        .navbar-left {
+            color: white;
+            text-align: center;
+        }
+        
+        .description_txt {
+            padding-right: 80px;
+            padding-left: 80px;
+            text-align: center;
+        }
+        
+        .pt-3 {
+            margin-left: 40px;
+            margin-right: 40px;
+            margin-top: 20px;
+            display: inline;
+        }
+        
+        .btn_paragraph {
+            margin: auto;
+            width: 70%;
+            padding: 10px;
+            padding-left: 10px;
+        }
+        
+        .jumbotron {
+            background-color: #fff;
+            color: #015ab0;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 118px;
+            padding-bottom: 0px !important;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+        
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        
+        .logo-small {
+            color: #f4511e;
+            font-size: 50px;
+        }
+        
+        .logo {
+            color: #f4511e;
+            font-size: 200px;
+        }
+        
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: #f4511e;
+        }
+        
+        .carousel-indicators li {
+            border-color: #f4511e;
+        }
+        
+        .carousel-indicators li.active {
+            background-color: #f4511e;
+        }
+        
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+        
+        .item span {
+            font-style: normal;
+        }
+        
+        .panel {
+            border: 1px solid #f4511e;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+        
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+        
+        .ma-le-35 {
+          /*  margin-left: 350px;*/
+           text-decoration: underline;
+        }
+        
+        .panel-footer .btn:hover {
+            border: 1px solid #f4511e;
+            background-color: #fff !important;
+            color: #f4511e;
+        }
+        
+        .panel-heading {
+            color: #fff !important;
+            background-color: #f4511e !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+        
+        .panel-footer {
+            background-color: white !important;
+        }
+        
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+        
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #f4511e;
+            color: #fff;
+        }
+        
+        .navbar {
+            margin-bottom: 0;
+            background-color: #fff;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 0px;
+            font-weight: 600;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        /* .navbar li a,
+        .navbar .navbar-brand {
+            color: #095aa7 !important;
+        } */
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-nav-footer li a:hover,
+        .navbar-nav li.active a {
+            color: #fff !important;
+            background-color: #055da6 !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #f4511e;
+        }
+        
+        .slideanim {
+            visibility: hidden;
+        }
+        
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+        }
+        
+        .page-footer {
+            background: #055da6;
+            color: white;
+            width: 100%;
+            /* margin-left: -200px; */
+        }
+        
+        .footer-copyright {
+            padding-bottom: 0px;
+            padding-left: 340px;
+            display: flex;
+        }
+        
+        .nar {
+            width: 76%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .footer_link-1 {
+            margin-left: 20px;
+            color: white;
+        }
+        
+        .footer-text-21 {
+            padding-left: 220px;
+            padding-right: 220px;
+        }
+        
+        .padding-ri-12 {
+            padding-right: 340px;
+            /* color: #fff; */
+            margin-top: -15px;
+        }
+        
+        .mar-top {
+            /*padding: 50px;*/
+                max-width: 100%;
+                height: auto;
+                padding: 4%;
+        }
+        
+        .button-style-1 {
+            border-radius: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .button-style-2 {
+            /* text-align: center; */
+            margin: auto;
+            width: 33%;
+            padding: 10px;
+            padding-left: 10px;
+            padding-bottom: 50px;
+        }
+        
+        .button-style-3 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .button-style-4 {
+            border-radius: 25px;
+            margin-bottom: 10px;
+            margin-right: 40px;
+        }
+        
+        .mar-right {
+            margin-right: 50px;
+        }
+        
+        .pa-le-1 {
+            padding-left: 50px;
+        }
+        
+        .fab {
+            font-size: 33px;
+        }
+        
+        .text-white {
+            color: #065eaa !important;
+        }
+        
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+        
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+        
+        @media screen and (max-width: 1850px) {
+            .bod {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+            .landing_img {
+                width: 100%;
+            }
+            .description_txt {
+                padding-right: 70px;
+                padding-left: 70px;
+            }
+            .btn_paragraph {
+                margin: auto;
+                width: 70%;
+                padding: 10px;
+                padding-left: 10px;
+            }
+            #column_blank{
+                display: none;
+            }
+            .footer-text-21 {
+                padding-left:  100px;
+                padding-right:  100px;
+            }
+        }
+        
+        @media screen and (max-width: 1500px) {
+            .bod {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            .landing_img {
+                width: 400px;
+            }
+            .description_txt {
+                padding-right: 70px;
+                padding-left: 70px;
+            }
+            .page-footer {
+               /* margin-left: -100px;*/
+            }
+            .btn_paragraph {
+                margin: auto;
+                width: 80%;
+                padding: 10px;
+                padding-left: 10px;
+            }
+            .navbar-nav {
+                display: none !important;
+            }  
+            #column_blank{
+                display: none;
+            }
+            .footer-text-21 {
+                padding: 0px;
+            }
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .bod {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .landing_img {
+                width: 400px;
+            }
+            .description_txt {
+                padding-right: 70px;
+                padding-left: 70px;
+            }
+            .page-footer {
+                margin-left: 0px;
+            }
+            .navbar-nav {
+                display: none !important;
+            }
+            .footer-text-21 {
+                padding: 0px;
+            }
+            #column_blank{
+                display: none;
+            }
+            /*.col-md-1 {
+                width: 10.333333%;
+            }
+            .col-md-4 {
+                width: 30.333333%;
+            }*/
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            .bod {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .description_txt {
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+            .btn_paragraph {
+                margin: 0;
+                text-align: center;
+                justify-content: space-evenly;
+                display: block;
+                width: 100%;
+                padding: 10px;
+                padding-left: 10px;
+            }
+            .responsive-flex-drection {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .footer-text-21 {
+                padding: 0;
+            }
+            #column_blank{
+                display: none;
+            }
+            .navbar-nav {
+                display: none !important;
+            }
+            .banner_h3{
+                font-size: 18px;
+            }
+
+        }
+        
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+            .landing_img {
+                width: 400px;
+            }
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            .bod {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .footer-copyright {
+                text-align: center;
+                padding: 0;
+            }
+            .landing_img {
+                width: 100%;
+            }
+            .responsive-flex-drection {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .padding-ri-12 {
+                padding: 0;
+            }
+            .row {
+                margin: 0;
+                display: contents;
+            }
+            .reverse_row{
+                display: flex;
+                flex-direction: column;
+            }
+            .row_element_first{
+                order:2;
+            }
+            .row_element_second{
+                order:1;
+            }
+            .navbar-nav {
+                margin: 0px;
+                display: block !important;
+            }
+
+            .pa-le-1 {
+                padding-left: 0;
+            }
+            .in {
+                width: 100%;
+                background-color: #337ab7;
+            }
+            .text-white {
+                color: white!important;
+            }
+            .jumbotron {
+                padding-top: 74px;
+                padding-bottom: 0;
+            }
+            .mar-top {
+                padding-bottom: 0px;
+                padding-top: 10px;
+            }
+            .description_txt {
+                text-align: center;
+            }
+            .pt-3 {
+                display: block;
+            }
+            .nar {
+                width: 100%;
+                display: block;
+            }
+            .footer_link-1 {
+                display: block;
+                margin-left: 0;
+                padding-bottom: 5px;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            .landing_img {
+                width: 250px;
+            }
+            .logo {
+                font-size: 150px;
+            }
+            .bod {
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            .footer-copyright {
+                padding: 0;
+                padding-top: 25px;
+            }
+            .landing_img {
+                width: 96vw;
+            }
+            .responsive-flex-drection {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .pa-le-1 {
+                padding-left: 0;
+            }
+            .in {
+                width: 100%;
+            }
+            .jumbotron {
+                padding-top: 74px;
+                padding-bottom: 0;
+            }
+            .mar-top {
+                padding-bottom: 0px;
+                padding-top: 10px;
+            }
+            .description_txt {
+                text-align: center;
+            }
+            .pt-3 {
+                display: block;
+            }
+            .nar {
+                display: block;
+                width: 100%;
+            }
+            .footer_link-1 {
+                display: block;
+                margin-left: 0;
+                padding-bottom: 5px;
+            }
+            .reverse_row{
+                display: flex;
+                flex-direction: column;
+            }
+            .row_element_first{
+                order:2;
+            }
+            .row_element_second{
+                order:1;
+            }
+        }
+        
+        @media screen and (max-width: 420px) {
+            .footer-text-21 {
+                padding: 10px;
+            }
+            .mar-right {
+                margin-right: 0;
+            }
+            .footer-copyright {
+                display: block;
+                padding-bottom: 40px;
+                padding-left: 20px;
+                padding-top: 25px;
+            }
+            .nar {
+                display: block;
+                width: 100%;
+            }
+            .ma-le-35 {
+                margin-left: 131px;
+            }
+            .padding-ri-12 {
+                padding-right: 0px;
+                margin-top: -15px;
+            }
+            .navbar-nav {
+                margin: 0px;
+            }
+            .row {
+                margin: 0;
+                display: contents;
+            }
+            .fab {
+                font-size: 30px;
+            }
+            .description_txt {
+                text-align: center;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+            .responsive-flex-drection {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .button-style-1 {
+                width: 167px;
+            }
+            .btn_paragraph {
+                text-align: center;
+                padding-left: 10px;
+                display: block !important;
+            }
+            .button-style-2 {
+                text-align: center;
+                margin: 0;
+                width: 100%;
+                padding: 10px;
+                /* padding-left: 30px; */
+                padding-bottom: 50px;
+            }
+            .landing_img {
+                width: 100%;
+            }
+            .res {
+                font-size: 17px;
+            }
+            .button-style-3 {
+                text-align: center;
+                display: block;
+            }
+            .footer-copyright {
+                text-align: center;
+            }
+            .page-footer {
+                width: 100vw;
+            }
+            .button-style-4 {
+                margin-right: 0;
+            }
+            .pa-le-1 {
+                padding-left: 0;
+            }
+            .jumbotron {
+                padding-top: 74px;
+                padding-bottom: 0;
+            }
+            .mar-top {
+                padding-bottom: 0px;
+                padding-top: 10px;
+            }
+            .pt-3 {
+                display: block;
+            }
+            .footer_link-1 {
+                display: block;
+                margin-left: 0;
+                padding-bottom: 5px;
+            }
+            .reverse_row{
+                display: flex;
+                flex-direction: column;
+            }
+            .row_element_first{
+                order:2;
+            }
+            .row_element_second{
+                order:1;
+            }
+        }
+        
+        @media screen and (max-width: 380px) {}
+        
+        @media screen and (max-width: 360px) {}
+        
+        #myNavbar {
+            /* width: 100vw; */
+            /* padding-right: 80px; */
+            /* background-color: #337ab7; */
+            /* color: white; */
+            /* float: right; */
+        }
+        
+        .fa-facebook-square {
+            background: white;
+            color: #3B5998;
+        }
+        
+        .fa-twitter-square {
+            background: white;
+            color: #55ACEE;
+        }
+        
+        .fa-youtube-square {
+            color: #bb0000;
+            background: white;
+        }
+        
+        .fa-instagram-square {
+            color: #125688;
+            background: white;
+        }
+        
+        .fa-pinterest-square {
+            color: #cb2027;
+            background: white;
+        }
+        
+        .fa-tumblr-square {
+            color: #2c4762;
+            background: white;
+        }
+        
+        .fa-instagram {
+            color: #125688;
+            background: white;
+        }
+        
+        .footer_link {
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <div class="bod">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-1 pa-le-1">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#myPage" style="padding-top: 10px;"><img src="logo1.png" class="img-rounded" alt="calahex logo"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="coming_soon.html" class="text-white">Crypto Exchange</a></li>
+                        <li><a href="coming_soon.html" class="text-white">Token Exchange</a></li>
+                        <li><a href="coming_soon.html" class="text-white">Margin Trading</a></li>
+                        <li><a href="coming_soon.html" class="text-white">Future Trading</a></li>
+                        <li><a href="coming_soon.html" class="text-white">Buy Crypto</a></li>
+                        <li><a href="coming_soon.html" class="text-white">Token Info Base</a></li>
+                        <li><a href="coming_soon.html" class="text-white">CAX Rewards</a></li>
+                        <li><a href="coming_soon.html" class="text-white">About Us</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
+                        <li><a href="coming_soon.html" style="padding-top: 10px;"><button type="button" class="btn btn-primary btn-sm" style="border-radius: 15px; ">Sign Up</button></a></li>
+                        <li><a href="coming_soon.html">Log In</a></li>
+                        <li>
+                            <a href="coming_soon.html"> <span class="glyphicon glyphicon-bell"></span></a>
+                        </li>
+                        <li><a href="coming_soon.html"><span class="glyphicon glyphicon-download"></span></a></li>
+                        <li><a href="coming_soon.html">EN/USD<span class="glyphicon glyphicon-triangle-bottom"></span></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="jumbotron text-center">
+            <h1>Caribbean and Latin America <br/> Hybrid Exchange</h1><br>
+            <p style=" word-spacing: 30px; padding-top: 30px;padding-bottom : 0px;"> <button type="button" class="btn btn-primary btn-lg " style="border-radius: 25px;">Sign Up</button> <button type="button" class="btn btn-default btn-lg" style="border-radius: 25px;color: #337ab7;border-color: #337ab7;">Log In</button></p><br>
+            <h3 class="banner_h3">
+                <div class="pt-3">
+                    <a href="coming_soon.html" style=" text-decoration: underline;">Token Listing</a>
+                </div>
+                <div class="pt-3">
+                    <a href="coming_soon.html" style=" text-decoration: underline;">Token Exchange</a>
+                </div>
+                <div class="pt-3">
+                    <a href="coming_soon.html" style=" text-decoration: underline;">Buy Crypto</a>
+                </div>
+                <div class="pt-3" style="margin-bottom: 80px;">
+                    <a href="coming_soon.html" style=" text-decoration: underline;">New</a>
+                </div>
+            </h3>
+        </div>
+
+        <!-- Container (About Section) -->
+        <div id="about" class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 mar-top">
+                    <img src="trading_img.jpg" class="img-rounded landing_img" alt="Trading Image">
+                </div>
+                <div class="col-sm-6 mar-top"><br>
+                    <h2 class="text-center" style="color:#337ab7; margin-bottom: 0px;">TRADING</h2><br>
+                    <h4 class="description_txt">Buy, sell and trade. Buy ETH/USDT with your debit and credit card from your Calahex Wallet. Get your crypto wallet going with 38+ spot trading pairs and 19+ margin pairs</h4>
+                    <p class="btn_paragraph" style="display: flex;  justify-content: center;  align-items: center;  "><button class="btn btn-primary button-style-1 mar-right">View Listed Cryptos</button><button class="btn btn-primary button-style-1">Futures Trading</button></p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container-fluid">
+            <div class="row slideanim reverse_row">
+
+                <div class="col-sm-6 mar-top row_element_first" ><br>
+                    <h2 class="text-center" style="color:#337ab7; margin-bottom: 0px;">LISTING</h2><br>
+                    <h4 class="description_txt"> Life is full of opportunities and so is Calahex. We root for the small and medium size businesses because they are the pillars of any economy. Get listed now on the cheapest platform there is, and meet a world full of investors</h4>
+                    <p class="btn_paragraph"  style="display: flex;  justify-content: center;  align-items: center;  "><button class="btn btn-primary" style="border-radius: 25px;">Token Info Base</button></p>
+                </div>
+                <div class="col-sm-6 mar-top row_element_second" >
+                    <img src="listing.png" class="img-rounded landing_img" alt="Trading Image">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="stacking" class="container-fluid">
+            <div class="row slideanim">
+                <div class="col-sm-6 mar-top">
+                    <img src="stacking_img.jpg" class="img-rounded landing_img" alt="Stacking Image">
+                </div>
+                <div class="col-sm-6 mar-top"><br>
+                    <h2 class="text-center" style="color:#337ab7; margin-bottom: 0px;">STAKING</h2><br>
+                    <h4 class="description_txt">Let our CAX Token do all the work for you. Hold CAX and receive regular interest directly into your account with our simplified staking system. No binding periods, no problem, just relax and enjoy.</h4>
+                    <p class="btn_paragraph"  style="display: flex;  justify-content: center;  align-items: center;  "><button class="btn btn-primary" style="border-radius: 25px;">Deposit CAX</button></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <div class="row slideanim reverse_row">
+
+                <div class="col-sm-6 mar-top row_element_first"  ><br>
+                    <h2 class="text-center" style="color:#337ab7; margin-bottom: 0px;">MOBILE</h2><br>
+                    <h4 class="description_txt"> Trade when, how and where you want. Trade, deposit, withdraw and transfer using our mobile app.</h4>
+                    <p class="btn_paragraph button-style-3"  style="display: flex;  justify-content: center;  align-items: center;  "><button class="btn btn-primary button-style-4"><i class="fab fa-google-play res" style="font-size: 15px;"></i> Download on Google Play</button><button class="btn btn-primary" style="border-radius: 25px; margin-bottom: 10px;"><i class="fab fa-apple" style="font-size: 20px;"></i> Download on App Store</button></p>
+                </div>
+                <div class="col-sm-6 mar-top row_element_second">
+                    <img src="mobile1.png" class="img-rounded landing_img" alt="Trading Image">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="community" class="container-fluid">
+            <div class="row slideanim  reverse_row">
+                <div class="col-sm-6 mar-top row_element_first">
+                   <!--  <h2 style="text-align: center; color:#337ab7; margin-bottom: 0px;">Community</h2><br> -->
+                    <h4 style="text-align: center; padding-right: 30px;  padding-left: 30px; margin-bottom: 0px; margin-top: 0px;"><strong style="color:#337ab7; ">Community:</strong>  Don't wait to join our community. We are a lively bunch. Keep up with us all over the world. Facebook, Twitter, Instagram and Linkedin you will find us screaming about Crypto all the time.</h4><br>
+
+                    <!-- <h2 style="text-align: center; color:#337ab7; margin-bottom: 0px; ">24/7 Support</h2><br> -->
+                    <h4 style="text-align: center; padding-right: 30px;  padding-left: 30px; margin-bottom: 0px; margin-top: 0px;"><strong style="color:#337ab7; ">24/7 Support:</strong>  We are here for you. So if you have any questions or need guidance, let us know. Will take care of all your issues and resolve them a.s.a.p.<br><br><a href="coming_soon.html" class="ma-le-35">Contact</a></h4><br>
+
+                   <!--  <h2 style="text-align: center; color:#337ab7; margin-bottom: 0px; ">Job Opportunities</h2><br> -->
+                    <h4 style="text-align: center; padding-right: 30px;  padding-left: 30px; margin-bottom: 0px; margin-top: 0px;"><strong style="color:#337ab7; ">Job Opportunities:</strong>  We are the coolest digital asset exchange in the world. If you come on board, you will enjoy the ride. If you are cool and smart than consider us family!<br><br><a href="coming_soon.html" class="ma-le-35">Details...</a></h4><br>
+                </div>
+                <div class="col-sm-6 mar-top row_element_second">
+                    <img src="community.png" class="img-rounded landing_img" alt="Stacking Image">
+                    <h1 style=" font-size: 60px; text-align: right; margin-top: 0; "><i class="fab fa-facebook-square"></i>&nbsp;<i class="fab fa-twitter-square"></i>&nbsp;<i class="fab fa-instagram"></i>&nbsp;<i class="fab fa-linkedin-in" style="color:#015ab0; font-size:30px;"></i>&nbsp;
+                        <i class="fab fa-instagram-square"></i>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+
+    </div>
+    <footer class="page-footer font-small blue pt-4">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left footer-text-21">
+
+            <!-- Grid row -->
+            <div class="row footer_row">
+
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+
+                <!--       <hr class="clearfix w-100 d-md-none pb-3"> -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <br>
+                    <h1 class="text-uppercase" style="margin-bottom: 30px;">LET'S TRADE</h1>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <button type="button" class="btn btn-default" style="border-radius: 30px; color: #055da6; font-size: 15px;">Sign Up</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-default" style="border-radius: 30px; color: #055da6; font-size: 15px; ">Log In</button>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-1 mb-md-0 mb-1" id="column_blank"></div>
+                <div class="col-md-2 mb-md-0 mb-2">
+
+                    <!-- Links -->
+                    <h4 class="text-uppercase text-white" style="margin-top:30px; color:white!important;">ABOUT CALAHEX</h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="coming_soon.html" class="footer_link text-center">Fees Info</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link text-center">Listed Assets</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link text-center">Referral</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link text-center">Job Opportunities</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 mb-md-0 mb-2">
+
+                    <!-- Links -->
+                    <h4 class="text-uppercase text-white" style="margin-top:30px; color:white!important;">FUTURES TRADING</h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Trade</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Futures Fees Info</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Futures Contract Specifications</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-1 mb-md-0 mb-1">
+
+                    <!-- Links -->
+                    <h4 class="text-uppercase text-white" style="margin-top:30px; color:white!important;">SOCIAL</h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Linkedin</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-1 mb-md-0 mb-1">
+
+                    <!-- Links -->
+                    <h4 class="text-uppercase text-white" style="margin-top:30px; color:white!important;">SUPPORT</h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">Contact Support</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-1 mb-md-0 mb-1">
+
+                    <!-- Links -->
+                    <h4 class="text-uppercase text-white" style="margin-top:30px; color:white!important;">LANGUAGE</h4>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="coming_soon.html" class="footer_link">English</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <!-- © 2020 Copyright -->
+            <a href="coming_soon.html" class="footer_link"><img src="logo_footer.png" class="img-rounded" alt="calahex logo" style="margin-top: -5px; padding-bottom: 10px;"></a>
+
+            <div class="nar">
+                <a href="coming_soon.html" class="footer_link-1 text-center">User Agreement</a>
+                <a href="coming_soon.html" class="footer_link-1 text-center">Privacy Policy</a>
+                <a href="coming_soon.html" class="footer_link-1 text-center">Cookie Policy</a>
+                <a href="coming_soon.html" class="footer_link-1 text-center">E-Sign Consent</a>
+            </div>
+
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+    <script>
+        $(document).ready(function() {
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function() {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+
+                $(window).scroll(function() {
+                    $(".slideanim").each(function() {
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+            // $('button').click(function() {
+            //     window.location.href = 'coming_soon.html';
+            // })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+- signup API
+POST /api/auth/signup HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 183
+
+{
+    "name":"Polar",
+    "email":"polarbear1014@mail.ru",
+    "password":"123456789",
+    "password_confirmation": "123456789",
+    "referral":"MJEW12MK",
+    "role": "user"
+}
+
+- login API
+POST /api/auth/login HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 96
+
+{
+    "email": "polarbear1014@mail.ru",
+    "password":"123456789",
+    "remember_me":true
+}
+
+- exchange Order API
+POST /api/main/exchangeOrder HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Cookie: XSRF-TOKEN=eyJpdiI6IjVvYm4wU2ZPRWtKRjFWeFIxeDZFK1E9PSIsInZhbHVlIjoiR1hkMmtSTGtNR3E1SVNwWnVlamlEMkRyRFNUMVhjejFQSFRUNVFOM1ZXNm41WFVtVXFwV2wzeUozaTZDLzVjY0w2V3dyejN1NHJSYkNzN1psRGpNL3ZJZHZMb1ZMQWJUZ0pjTFhac1dDRllBRnBqVGswSGpaQlU4anJBbU1oZTQiLCJtYWMiOiJkZjkzMGUzMjEwMDlmYTY1ZTcxZjJiMjdiNWIwYTAwOTIxNjA1OWYzY2NhNDQ5M2EyOWY4NGMxNTUzODg3OWI2In0%3D; laravel_session=eyJpdiI6IjRNVXM1YXlzK2MwNlFkaENGSndkZVE9PSIsInZhbHVlIjoiaHVqT3QzQy93dWYyM1l0L0tBMlNlRi92dVRybncwUmk4OTc3bHQyNE5KcGNiN05VTyswb08xSWNtRmxhclhTL1VZK3NpNmZQcStQZ25Ybk5BTG96ellnN01VREl0cEMwL2VFWWtRQ1BaWmI1MUJTRjRJS2sxY0VWMytLSXg2czYiLCJtYWMiOiI2NmUwY2NmYzg0YTM0NDUwODVhY2M2MmEyNTExMWI0NGFkZDE2NTc2NmU3Mzg2YzM5YWZhZmE1ZTI2MTJiZmRlIn0%3D
+Content-Length: 27
+
+{
+    "pair":"USDT_BTC"
+}
+
+- exchange Trade API
+POST /api/main/exchangeTrade HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Cookie: XSRF-TOKEN=eyJpdiI6IjVvYm4wU2ZPRWtKRjFWeFIxeDZFK1E9PSIsInZhbHVlIjoiR1hkMmtSTGtNR3E1SVNwWnVlamlEMkRyRFNUMVhjejFQSFRUNVFOM1ZXNm41WFVtVXFwV2wzeUozaTZDLzVjY0w2V3dyejN1NHJSYkNzN1psRGpNL3ZJZHZMb1ZMQWJUZ0pjTFhac1dDRllBRnBqVGswSGpaQlU4anJBbU1oZTQiLCJtYWMiOiJkZjkzMGUzMjEwMDlmYTY1ZTcxZjJiMjdiNWIwYTAwOTIxNjA1OWYzY2NhNDQ5M2EyOWY4NGMxNTUzODg3OWI2In0%3D; laravel_session=eyJpdiI6IjRNVXM1YXlzK2MwNlFkaENGSndkZVE9PSIsInZhbHVlIjoiaHVqT3QzQy93dWYyM1l0L0tBMlNlRi92dVRybncwUmk4OTc3bHQyNE5KcGNiN05VTyswb08xSWNtRmxhclhTL1VZK3NpNmZQcStQZ25Ybk5BTG96ellnN01VREl0cEMwL2VFWWtRQ1BaWmI1MUJTRjRJS2sxY0VWMytLSXg2czYiLCJtYWMiOiI2NmUwY2NmYzg0YTM0NDUwODVhY2M2MmEyNTExMWI0NGFkZDE2NTc2NmU3Mzg2YzM5YWZhZmE1ZTI2MTJiZmRlIn0%3D
+Content-Length: 27
+
+{
+    "pair":"USDT_BTC"
+}
+
+- exchange Crypto Pair List API
+POST /api/main/exchangeCryptoPair HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Cookie: XSRF-TOKEN=eyJpdiI6Ilg2dStwb3VZQnp0WWw0NVFsWkxQWkE9PSIsInZhbHVlIjoiWmR5MFRGQ1p2YVd2bzlyeHIyMktzREhyeTE2c1N2OGhkQVFwRHdYQ0hiYTh4WEdXZDNiaC9MZDdMOGM2TU9NeU9hT3ZGdVBvUGNLS1NsanI4NzVNbHNkK2FkYWt6eXBBdFljNmRqcCtBS2VUMWxwcHEwb21zTUI5N0NPOCsvVEMiLCJtYWMiOiIwZTA2YTNmYzZkNTg0MWExZWU4Mjk0N2FjNmEwODAzMjE3MjI0OGRkOTBkMmUzNTVkMTI3MWFhNmU1MmI3ZGRjIn0%3D; laravel_session=eyJpdiI6ImJPYU1hS3lZT1RVcmNKdFM0QWNFYXc9PSIsInZhbHVlIjoiaUdsdGxYem1GSGRoTW1WUUNaaHdnRjQzdEoxR3B3R08vUlovdzBmYjNTSmZjL2dNOHJaRTl5TzNDZ011M0lmYnRsM1BRU3NtMDhJYUR2dHA4LzZzWHdQRndzcTVVNmdQV3ZRTnUySGtJVkFJUGduWEJsSmxVWDdTZFdsbWt3ZloiLCJtYWMiOiIxNTYxNzg0ZDNmM2Y5OGIzYWZkZWViZWM4YmM0NzI2ZmFmZjUxYWI4ZWMyNzg2YzM2YzFjZGY1YjY4ODc4YzJkIn0%3D
+Content-Length: 27
+
+{
+    "pair_end":"USDC"
+}
+
+- exchange Token Pair List API
+POST /api/main/exchangeTokenPair HTTP/1.1
+Host: 10.10.10.221:80
+Cookie: XSRF-TOKEN=eyJpdiI6Ilg2dStwb3VZQnp0WWw0NVFsWkxQWkE9PSIsInZhbHVlIjoiWmR5MFRGQ1p2YVd2bzlyeHIyMktzREhyeTE2c1N2OGhkQVFwRHdYQ0hiYTh4WEdXZDNiaC9MZDdMOGM2TU9NeU9hT3ZGdVBvUGNLS1NsanI4NzVNbHNkK2FkYWt6eXBBdFljNmRqcCtBS2VUMWxwcHEwb21zTUI5N0NPOCsvVEMiLCJtYWMiOiIwZTA2YTNmYzZkNTg0MWExZWU4Mjk0N2FjNmEwODAzMjE3MjI0OGRkOTBkMmUzNTVkMTI3MWFhNmU1MmI3ZGRjIn0%3D; laravel_session=eyJpdiI6ImJPYU1hS3lZT1RVcmNKdFM0QWNFYXc9PSIsInZhbHVlIjoiaUdsdGxYem1GSGRoTW1WUUNaaHdnRjQzdEoxR3B3R08vUlovdzBmYjNTSmZjL2dNOHJaRTl5TzNDZ011M0lmYnRsM1BRU3NtMDhJYUR2dHA4LzZzWHdQRndzcTVVNmdQV3ZRTnUySGtJVkFJUGduWEJsSmxVWDdTZFdsbWt3ZloiLCJtYWMiOiIxNTYxNzg0ZDNmM2Y5OGIzYWZkZWViZWM4YmM0NzI2ZmFmZjUxYWI4ZWMyNzg2YzM2YzFjZGY1YjY4ODc4YzJkIn0%3D
+- profile API
+GET /api/user/profile HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWI3N2U5MDNlMWMxNGNmNTcwNzhhNzkyMDI4YzYwNDJmMmQ2NWIxZWNiZDhlOWRhOTIyNmMxYzBjNTY5N2Y4Zjc1ZThiZDhmMGIxMTBhNWYiLCJpYXQiOiIxNjA3Mjg1NjMxLjcyMTI5NyIsIm5iZiI6IjE2MDcyODU2MzEuNzIxMzAwIiwiZXhwIjoiMTYzODgyMTYzMS42OTA1OTIiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hAn_8ur2VEgIVx3MIiiZaE9FfeJQOQIpSe2DZK2NzTJS6FVBfLPkayTyb5_GbAn4IKvhlc-l_KV0R5lY2goBGfZ4Cgl7ehR82Q3Z6YSO4bKPy3Lw9d8QXhEWlL04doHOkkScjqNhnnhbcS8_3aDg6BB2QmJuA7DZKzHBSsVq6xjYTUE_j_-IcUvcVPWQDYPwBxF_edX0J38a8-IBfiTXq6ZmBcDwEfeDWbRBH_Mbus-WGKLqKplttET4mubNyJljk22QNtvay35UkLcZJDN8hTPTYR234mZwViGPoq37SiUWonAWBHYl2F-DZAZT80gppjKADOJduCewCSybwe-CY9NCrZT8IVkRzP1QmoYtUxjl2Gv53y3GSAQn3wniLHHi2e03npSWu3R2Q3tJavi2g50a5cPxwIxrx50Ahw0pRGvjA0GFef1_jcy4DVsMfocVRjEzeKUTJWx_NkdF8r4ug8S_QBE9n-WUEeZcm0RHmN0FhezOiTeyGBCmSKwhebHAPdjCQAVnRFfehS4ZsbppqLxwgQ_4PsX-4Yc7DtzYIpHLU5t1Bpx3VM4qTPXYCw1FfwROg3Z1VvrQITP6NevJX6DDAygeNT5bvpatcst_0qsUYG4E21nEyjG6ItMOR4Vnj5iui89QQkTzHH4h8UXfBpM36bNLt-Wjg0P2DfF0tPU
+
+- logout API
+GET /api/auth/logout HTTP/1.1
+Host: 10.10.10.221:80
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWI3N2U5MDNlMWMxNGNmNTcwNzhhNzkyMDI4YzYwNDJmMmQ2NWIxZWNiZDhlOWRhOTIyNmMxYzBjNTY5N2Y4Zjc1ZThiZDhmMGIxMTBhNWYiLCJpYXQiOiIxNjA3Mjg1NjMxLjcyMTI5NyIsIm5iZiI6IjE2MDcyODU2MzEuNzIxMzAwIiwiZXhwIjoiMTYzODgyMTYzMS42OTA1OTIiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hAn_8ur2VEgIVx3MIiiZaE9FfeJQOQIpSe2DZK2NzTJS6FVBfLPkayTyb5_GbAn4IKvhlc-l_KV0R5lY2goBGfZ4Cgl7ehR82Q3Z6YSO4bKPy3Lw9d8QXhEWlL04doHOkkScjqNhnnhbcS8_3aDg6BB2QmJuA7DZKzHBSsVq6xjYTUE_j_-IcUvcVPWQDYPwBxF_edX0J38a8-IBfiTXq6ZmBcDwEfeDWbRBH_Mbus-WGKLqKplttET4mubNyJljk22QNtvay35UkLcZJDN8hTPTYR234mZwViGPoq37SiUWonAWBHYl2F-DZAZT80gppjKADOJduCewCSybwe-CY9NCrZT8IVkRzP1QmoYtUxjl2Gv53y3GSAQn3wniLHHi2e03npSWu3R2Q3tJavi2g50a5cPxwIxrx50Ahw0pRGvjA0GFef1_jcy4DVsMfocVRjEzeKUTJWx_NkdF8r4ug8S_QBE9n-WUEeZcm0RHmN0FhezOiTeyGBCmSKwhebHAPdjCQAVnRFfehS4ZsbppqLxwgQ_4PsX-4Yc7DtzYIpHLU5t1Bpx3VM4qTPXYCw1FfwROg3Z1VvrQITP6NevJX6DDAygeNT5bvpatcst_0qsUYG4E21nEyjG6ItMOR4Vnj5iui89QQkTzHH4h8UXfBpM36bNLt-Wjg0P2DfF0tPU
+
+- createtoken API
+POST /api/main/createtoken HTTP/1.1
+Host: 10.10.10.221:80
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWI3N2U5MDNlMWMxNGNmNTcwNzhhNzkyMDI4YzYwNDJmMmQ2NWIxZWNiZDhlOWRhOTIyNmMxYzBjNTY5N2Y4Zjc1ZThiZDhmMGIxMTBhNWYiLCJpYXQiOiIxNjA3Mjg1NjMxLjcyMTI5NyIsIm5iZiI6IjE2MDcyODU2MzEuNzIxMzAwIiwiZXhwIjoiMTYzODgyMTYzMS42OTA1OTIiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hAn_8ur2VEgIVx3MIiiZaE9FfeJQOQIpSe2DZK2NzTJS6FVBfLPkayTyb5_GbAn4IKvhlc-l_KV0R5lY2goBGfZ4Cgl7ehR82Q3Z6YSO4bKPy3Lw9d8QXhEWlL04doHOkkScjqNhnnhbcS8_3aDg6BB2QmJuA7DZKzHBSsVq6xjYTUE_j_-IcUvcVPWQDYPwBxF_edX0J38a8-IBfiTXq6ZmBcDwEfeDWbRBH_Mbus-WGKLqKplttET4mubNyJljk22QNtvay35UkLcZJDN8hTPTYR234mZwViGPoq37SiUWonAWBHYl2F-DZAZT80gppjKADOJduCewCSybwe-CY9NCrZT8IVkRzP1QmoYtUxjl2Gv53y3GSAQn3wniLHHi2e03npSWu3R2Q3tJavi2g50a5cPxwIxrx50Ahw0pRGvjA0GFef1_jcy4DVsMfocVRjEzeKUTJWx_NkdF8r4ug8S_QBE9n-WUEeZcm0RHmN0FhezOiTeyGBCmSKwhebHAPdjCQAVnRFfehS4ZsbppqLxwgQ_4PsX-4Yc7DtzYIpHLU5t1Bpx3VM4qTPXYCw1FfwROg3Z1VvrQITP6NevJX6DDAygeNT5bvpatcst_0qsUYG4E21nEyjG6ItMOR4Vnj5iui89QQkTzHH4h8UXfBpM36bNLt-Wjg0P2DfF0tPU
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 292
+
+{
+    "token_name": "Ehtereum",
+    "token_id": "2",
+    "token_symbol": "Ehtereum",
+    "token_decimal": 3,
+    "token_whitepaper": "https://calahex.com/whitepaper1.pdf",
+    "token_pair_type": "ETH/BTC",
+    "token_logo": "https://calahex.com/logo1.png",
+    "status": "approved"
+}
+
+- tokenlist API
+POST /api/main/tokenlist HTTP/1.1
+Host: 10.10.10.221:80
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWI3N2U5MDNlMWMxNGNmNTcwNzhhNzkyMDI4YzYwNDJmMmQ2NWIxZWNiZDhlOWRhOTIyNmMxYzBjNTY5N2Y4Zjc1ZThiZDhmMGIxMTBhNWYiLCJpYXQiOiIxNjA3Mjg1NjMxLjcyMTI5NyIsIm5iZiI6IjE2MDcyODU2MzEuNzIxMzAwIiwiZXhwIjoiMTYzODgyMTYzMS42OTA1OTIiLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hAn_8ur2VEgIVx3MIiiZaE9FfeJQOQIpSe2DZK2NzTJS6FVBfLPkayTyb5_GbAn4IKvhlc-l_KV0R5lY2goBGfZ4Cgl7ehR82Q3Z6YSO4bKPy3Lw9d8QXhEWlL04doHOkkScjqNhnnhbcS8_3aDg6BB2QmJuA7DZKzHBSsVq6xjYTUE_j_-IcUvcVPWQDYPwBxF_edX0J38a8-IBfiTXq6ZmBcDwEfeDWbRBH_Mbus-WGKLqKplttET4mubNyJljk22QNtvay35UkLcZJDN8hTPTYR234mZwViGPoq37SiUWonAWBHYl2F-DZAZT80gppjKADOJduCewCSybwe-CY9NCrZT8IVkRzP1QmoYtUxjl2Gv53y3GSAQn3wniLHHi2e03npSWu3R2Q3tJavi2g50a5cPxwIxrx50Ahw0pRGvjA0GFef1_jcy4DVsMfocVRjEzeKUTJWx_NkdF8r4ug8S_QBE9n-WUEeZcm0RHmN0FhezOiTeyGBCmSKwhebHAPdjCQAVnRFfehS4ZsbppqLxwgQ_4PsX-4Yc7DtzYIpHLU5t1Bpx3VM4qTPXYCw1FfwROg3Z1VvrQITP6NevJX6DDAygeNT5bvpatcst_0qsUYG4E21nEyjG6ItMOR4Vnj5iui89QQkTzHH4h8UXfBpM36bNLt-Wjg0P2DfF0tPU
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+
+- exchange order API
+POST /api/main/exchangeOrder HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 27
+
+{
+    "pair":"USDT_BTC"
+}
+
+- exchange trade API
+POST /api/main/exchangeTrade HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 27
+
+{
+    "pair":"USDT_BTC"
+}
+
+- exchange crypto pair list API
+POST /api/main/exchangeCryptoPair HTTP/1.1
+Host: 10.10.10.221:80
+Content-Type: application/json
+X-Requested-With: XMLHttpRequest
+Content-Length: 27
+
+{
+    "pair_end":"USDC"
+}
+
+- exchange token pair list API
+POST /api/main/exchangeTokenPair HTTP/1.1
+Host: 10.10.10.221:80
